@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Consumo de Energía Eléctrica</title>
+
+</head>
+<body>
+    <canvas id="consumo"></canvas>
+  <script>
+    const ctx = document.getElementById('consumo');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+        datasets: [{
+          label: 'Consumo Energético por KWh (per cápita) Colombia ',
+          data: [920.577777143746, 972.685537804568, 1000.24577097448, 999.821567351652, 1077.28348556921, 1132.35899630346, 1175.92695333195, 1205.55667721954, 1460.20990308805, 1383.42975429261, 1512.94636527106, 1478.42913852649, 1533.06352290717, 1466.90025072176, 1502.82565004378, 1470.27462790488, 1569.1710661367, 1548.65063830136  ],
+          borderWidth: 1
+        }]
+      },      
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: 'red'
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: 'red', // ✅ color va aquí
+              font: {
+                weight: 'bold',
+                size: 30
+              }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: 'black', // ✅ color va aquí también
+              font: {
+                weight: 'bold',
+                size: 12
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

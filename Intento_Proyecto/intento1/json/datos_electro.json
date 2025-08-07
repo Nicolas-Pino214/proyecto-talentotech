@@ -1,0 +1,86 @@
+[ {
+    "costo_estrato":{
+      "1": 819.09,
+      "2": 819.09,
+      "3": 819.09,
+      "4": 819.09,
+      "5": 982.91,
+      "6": 982.91
+    }
+  },
+  {
+    "nombre": "Nevera",
+    "variantes": {
+      "A": 12.5,
+      "B": 16.7,
+      "C": 16.7,
+      "D": 25,
+      "E": 25,
+      "F": 37.5,
+      "G": 37.5
+    }
+  },
+  {
+    "nombre": "Lavadora",
+    "variantes": {
+      "A": 6,
+      "B": 6.6,
+      "C": 8.16,
+      "D": 10.2,
+      "E": 10.2,
+      "F": 13.8,
+      "G": 13.8
+    }
+  },
+  {
+    "nombre": "Televisor",
+    "variantes": {
+      "altoConsumo": 20,
+      "bajoConsumo": 8
+    }
+  },
+  {
+    "nombre": "Plancha",
+    "potencia_kwh_mes": 10
+  },
+  {
+    "nombre": "Plancha_vapor",
+    "potencia_kwh_mes": 7.2
+  },
+  {
+    "nombre": "Microondas",
+    "potencia_kwh_mes": 5
+  },
+  {
+    "nombre": "Aire_acondicionado",
+    "variantes": {
+      "ventana": 144,
+      "split": 120,
+      "split_inverter": 96,
+      "miniSplit": 84,
+      "central": 420
+    }
+  },
+  {
+    "nombre": "AirFryer",
+    "potencia_kwh_mes": 15
+  },
+  {
+    "nombre": "Licuadora",
+    "potencia_kwh_mes": 6
+  },
+  {
+    "nombre": "Ventilador",
+    "variantes": {
+      "pedestal": 90,
+      "turbo": 100
+    }
+  },
+  {
+    "nombre": "Arrocera",
+    "variantes": {
+      "mediana": 7.5,
+      "grande": 10.5
+    }
+  }
+]

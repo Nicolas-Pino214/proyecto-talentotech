@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_form.css">
+    <title>Calculadora de Eficiencia Energética</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Calculadora de Eficiencia Energética por Electrodomésticos</h1>
+    </header>
+    <main class="main">
+        <h3>En este espacio se realizará el cuestionario para el cálculo apropiado de su consumo, por lo que si lo realiza y envia los datos se tomara que acepta compartir con nosotros el manejo de los datos que nos comparte.</h3>
+        <p>En este intento trataremos de recrear una calculadora que toma datos de una carpeta de datos y a traves de un cuestionario con JavaScript se tomaran los datos a comparar.</p>
+        <p>En este punto se tendran en cuenta ciertos factores que nos ayudaran a recrear esta idea.</p>
+        <div class="form_container">
+            <form action="" method="post">
+                <!-- Se pedira la información personal para registrar el quien realiza la encuesta. -->
+                <fieldset class="info_personal" id="info_personal">
+                    <legend class="legend">Información Personal</legend>
+                    <!-- Se pedirá el nombre en un texto obligatorio -->
+                    <label for="name" class="opcion">Nombre : </label>
+                    <input type="text" id="name" name="name" placeholder="Nombre Completo: " required>
+                    <br>
+                    <label for="gender" class="opcion">Genero </label>
+                    <input type="radio" id="male" name="gender" value="male" required>Masculino
+                    <input type="radio" id="fem" name="gender" value="fem" required>Femenino
+                    <input type="radio" id="other" name="gender" value="other" required>Otro
+                    <br>
+                    <!-- <input type="radio" id="helicoptero_apache" name="gender" value="helicoptero_apache" required>Helicoptero Apache -->
+                     <label for="Ubication" class="opcion">Ubicación</label>
+                     <input type="location" id="location" name="location" placeholder="Ubicación ciudad,departamento,País">
+                     <label for="estrato" class="opcion">Cual es su Estrato social</label>
+                     <select name="estrato" id="estrato" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                     </select>
+
+                </fieldset>
+                <fieldset class="info_personal">
+                    <legend class="legend">¿Tiene alguno de estos Electrodomésticos?</legend>
+                    <label for="nevera" class="opcion">Nevera</label>
+                    <select name="nevera" id="nevera" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="nevera1" class="opcion" id="nevera1" style="display: none;">Que tipo de consumo tiene su nevera: </label>
+                    <select name="nevera1" id="nevera_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="a">tipo A</option>
+                        <option value="b">tipo B</option>
+                        <option value="c">tipo C</option>
+                        <option value="d">tipo D</option>
+                        <option value="e">tipo E</option>
+                        <option value="f">tipo F</option>
+                        <option value="g">tipo G</option>                        
+                    </select>
+                    <label for="nevera2" class="opcion" id="nevera2" style="display: none;">Cuantas neveras tiene: </label>
+                    <input type="number" id="nevera_2" name="nevera2" placeholder="Cantidad de neveras" disabled style="display: none;">
+                    <br>
+                    <!-- Ya teniendo las opciones de nevera vamos por las opciones de Lavadoras -->
+                    <label for="lavadora" class="opcion">Lavadora</label>
+                    <select name="lavadora" id="lavadora" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="lavadora1" class="opcion" id="lavadora1" style="display: none;">Que tipo de consumo tiene su Lavadora: </label>
+                    <select name="lavadora1" id="lavadora_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="a">tipo A</option>
+                        <option value="b">tipo B</option>
+                        <option value="c">tipo C</option>
+                        <option value="d">tipo D</option>
+                        <option value="e">tipo E</option>
+                        <option value="f">tipo F</option>
+                        <option value="g">tipo G</option>                        
+                    </select>
+                    <label for="lavadora2" class="opcion" id="lavadora2" style="display: none;">Cuantas lavadoras tiene: </label>
+                    <input type="number" id="lavadora_2" name="lavadora2" placeholder="Cantidad de lavadoras" disabled style="display: none;">
+                    <br>
+                    <!-- Vamos con los televisores -->
+                     <label for="televisor" class="opcion">Televisor</label>
+                    <select name="tevisor" id="televisor" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="televisor1" class="opcion" id="televisor1" style="display: none;">Que tipo de consumo tiene su Televisor: </label>
+                    <select name="televisor1" id="televisor_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="alto">Alto Consumo</option>
+                        <option value="bajo">Bajo Consumo</option>
+                    </select>
+                    <label for="televisor2" class="opcion" id="televisor2" style="display: none;">Cuantos televisores tiene: </label>
+                    <input type="number" id="televisor_2" name="televisor2" placeholder="Cantidad de televisores" disabled style="display: none;">
+                    <br>
+                    <!-- Ahora vamos con las planchas -->
+                    <label for="plancha" class="opcion">Plancha</label>
+                    <select name="plancha" id="plancha" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="plancha1" class="opcion" id="plancha1" style="display: none;">Cuantas planchas tiene: </label>
+                    <input type="number" id="plancha_1" name="plancha1" placeholder="Cantidad de planchas" disabled style="display: none;">
+                    <br>
+                    <!-- ahora vamos con las planchas a vapor -->
+                    <label for="planchavap" class="opcion">Plancha a Vapor</label>
+                    <select name="planchavap" id="planchavap" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="planchavap1" class="opcion" id="planchavap1" style="display: none;">Cuantas planchas a vapor tiene: </label>
+                    <input type="number" id="planchavap_1" name="planchavap1" placeholder="Cantidad de planchas a vapor" disabled style="display: none;">
+                    <br>
+                    <!-- Ahora vamos por el microondas -->
+                    <label for="micro" class="opcion">Microondas</label>
+                    <select name="micro" id="micro" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="micro" class="opcion" id="micro1" style="display: none;">Cuantos microondas tiene: </label>
+                    <input type="number" id="micro_1" name="micro1" placeholder="Cantidad de microondas" disabled style="display: none;">
+                    <br>
+                    <!-- Ahora vamos por el aire acondicionado -->
+                    <label for="aire" class="opcion">Aire Acondicionado</label>
+                    <select name="aire" id="aire" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="aire1" class="opcion" id="aire1" style="display: none;">Que tipo de aire acondicionado tiene: </label>
+                    <select name="aire1" id="aire_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="ventana">Ventana</option>
+                        <option value="split">Split</option>
+                        <option value="splitInv">Split Inverter</option>
+                        <option value="miniSplit">Mini Split</option>
+                        <option value="central">Central</option>                   
+                    </select>
+                    <label for="aire2" class="opcion" id="aire2" style="display: none;">Cuantos aires acondicionados tiene: </label>
+                    <input type="number" id="aire_2" name="aire2" placeholder="Cantidad de aires acondicionados" disabled style="display: none;">
+                    <br>
+                    <!-- Vamos por el Airfryer / freidora de aire -->
+                    <label for="freidora" class="opcion">Freidora de Aire</label>
+                    <select name="freidora" id="freidora" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="freidora" class="opcion" id="freidora1" style="display: none;">Cuantas freidoras de aire tiene: </label>
+                    <input type="number" id="freidora_1" name="freidora1" placeholder="Cantidad de freidoras de aire" disabled style="display: none;">
+                    <br>
+                    <!-- Vamos por la licuadora -->
+                    <label for="licuadora" class="opcion">Licuadora</label>
+                    <select name="licuadora" id="licuadora" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="licuadora" class="opcion" id="licuadora1" style="display: none;">Cuantas licuadoras tiene: </label>
+                    <input type="number" id="licuadora_1" name="licuadora1" placeholder="Cantidad de licuadoras" disabled style="display: none;">
+                    <br>
+                    <!-- Vamos por el ventilador -->
+                    <label for="ventilador" class="opcion">Ventilador</label>
+                    <select name="ventilador" id="ventilador" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="ventilador1" class="opcion" id="ventilador1" style="display: none;">Que tipo de ventilador tiene: </label>
+                    <select name="ventilador1" id="ventilador_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="pedestal">De pedestal</option>
+                        <option value="turbo">Turbo</option>                
+                    </select>
+                    <label for="ventilador2" class="opcion" id="ventilador2" style="display: none;">Cuantos ventiladores tiene: </label>
+                    <input type="number" id="ventilador_2" name="ventilador2" placeholder="Cantidad de ventiladores" disabled style="display: none;">
+                    <br>
+                    <!-- Ahora vamos por la arrocera -->
+                    <label for="arroz" class="opcion">Arrocera</label>
+                    <select name="arroz" id="arroz" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="arroz1" class="opcion" id="arroz1" style="display: none;">Que tipo de arrocera tiene: </label>
+                    <select name="arroz1" id="arroz_1" disabled style="display: none;">
+                        <option value="">Seleccione una opción </option>
+                        <option value="mediana">Mediana</option>
+                        <option value="grande">Grande</option>                
+                    </select>
+                    <label for="arroz2" class="opcion" id="arroz2" style="display: none;">Cuantas arroceras tiene: </label>
+                    <input type="number" id="arroz_2" name="arroz2" placeholder="Cantidad de arroceras" disabled style="display: none;">
+                    <br>
+                </fieldset>
+                <div class="info_personal" id="boton">
+                    <p class="boton">Enviar para calcular:</p>
+                    <button type="button" class="boton" id="button">Calcular</button>
+                </div>
+                <div class="outputBox">
+                    
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <script src="js/scripts.js"></script>
+    <footer class="footer">Creado por Grupo de trabajo de la Calculadora de Eficiencia Energética <a href="mailto:eficienciaenergeticatng@gmail.com" class="email">eficienciaenergeticatng@gmail.com</a> <br> Bootcamp Talento Tech Region 2 - 
+    2025</footer>
+</body>
+</html>

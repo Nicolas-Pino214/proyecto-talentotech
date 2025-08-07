@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles_main.css">
+    <title>Calculadora de Eficiencia Energética</title>
+</head>
+<body>
+    <header class="headerMain">
+        <h3>EFICIENCIA DE ENERGÍA ELECTRICA DOMÉSTICA.</h3>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#info_General">Información General</a></li>
+            <li><a href="#estrategias">Estrategias</a></li>
+            <li><a href="#grafico">Gasto Energetico Anual</a></li>
+            <li><a href="#button">Calcular Gasto Doméstico</a></li>
+        </ul>
+    </nav>
+    <div class="Contenedor">
+        <section class="info" id="info_General">
+            <p>La eficiencia energética en el hogar consiste en la reducción de consumo de energía sin disminuir nuestra calidad de vida y protegiendo el medio ambiente. Es decir, que trata de mantener nuestro ritmo de vida y de producción disminuyendo la energía necesaria. Para empezar a actuar de manera eficiente en nuestros hogares basta con cambiar pequeños hábitos en nuestro comportamiento diario. De esta forma, podemos alcanzar una repercusión muy importante y efectiva en la reducción de consumo de energía y de emisiones de CO2 a la atmósfera.</p>
+        </section>
+        <section class="info" id="explicacion">
+            <p>Hay una teoría de que existió antes una novela más corta, en el estilo de sus futuras Novelas ejemplares. Ese escrito, si es que existió, está perdido, pero hay muchos testimonios de que la historia de don Quijote,</p>
+        </section>
+        <section class="info" id="estrategias">
+            <p>Existe una obra cuyos paralelos con Don Quijote son indiscutibles: el Entremés de los romances, en que el protagonista labrador enloquece por la lectura, pero de romances. El labrador abandonó a su mujer, y se echó a los caminos, como hizo don Quijote.</p>
+        </section>
+        <section class="info" id="grafico">            
+            <canvas id="consumo"></canvas>
+            <script>
+            const ctx = document.getElementById('consumo');
+        
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                labels: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Consumo Energético por KWh (per cápita) Colombia ',
+                    data: [920.577777143746, 972.685537804568, 1000.24577097448, 999.821567351652, 1077.28348556921, 1132.35899630346, 1175.92695333195, 1205.55667721954, 1460.20990308805, 1383.42975429261, 1512.94636527106, 1478.42913852649, 1533.06352290717, 1466.90025072176, 1502.82565004378, 1470.27462790488, 1569.1710661367, 1548.65063830136  ],
+                    borderColor: 'rgba(98, 255, 98, 1)',
+                    backgroundColor: 'rgba(98, 200, 82, 0.3)',
+                    fill: false,
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                    plugins: {
+                    legend: {
+                        labels: {
+                        color: 'black'
+                        }
+                    }
+                    },
+                    scales: {
+                    x: {
+                        ticks: {
+                        color: 'black', // ✅ color va aquí
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                        color: 'black', // ✅ color va aquí también
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        }
+                        }
+                    }
+                    }
+                }
+    });
+            </script>
+  
+        </section>
+    </div>
+    <footer class="footer">
+        <p class="foot">Creado por Gyohan Perdomo <a href="mailto:eficienciaenergeticatng@gmail.com" class="email">eficienciaenergeticatng@gmail.com</a> Bootcamp Talento Tech Region 2 - 2025</p>
+        <button type="button" id="foot">Calcular Gasto Domestico</button>
+    </footer>
+    <script src="js/scripts_main.js"></script>
+</body>
+</html>
