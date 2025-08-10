@@ -43,7 +43,7 @@ body {
     background-color: rgba(169, 240, 245, 0.6);
     border-radius: 8px;
     padding: 50px;
-    width: 85%;  
+    width: 80%;  
     justify-content: center; 
     margin: 30px auto;
     text-align: center;
@@ -141,4 +141,20 @@ foot:nth-child(2) {grid-area: button;}
     color: #b6c9fd;
     text-decoration: underline;
     transition: color 0.3s ease;
+}
+
+#explicacion {
+    text-align: left;
+    font-weight: bold;
+    gap: 40px;
+}
+
+#info_General {
+    text-align: center;
+    font-weight: bold;
+}
+#estrategias {
+   font-weight: bold;
+    padding-bottom: 0;
+    padding: 30px;
 }
