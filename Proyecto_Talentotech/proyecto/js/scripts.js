@@ -50,13 +50,13 @@ function mostrarCamposSecundarios(electrodomestico, valor) {
     if (valor === 'si') {
         // Mostrar campos secundarios
         if (label1) {
-            label1.style.display = 'inline';
-            select1.style.display = 'inline';
+            label1.style.display = 'block';
+            select1.style.display = 'block';
             select1.disabled = false;
         }
         if (label2) {
-            label2.style.display = 'inline';
-            input2.style.display = 'inline';
+            label2.style.display = 'block';
+            input2.style.display = 'block';
             input2.disabled = false;
         }
     } else {
